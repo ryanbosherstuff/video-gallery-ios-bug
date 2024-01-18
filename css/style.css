@@ -245,3 +245,12 @@ textarea {
   }
 }
 
+.demo {
+  width: 380px;
+  height: 500px;
+  background: #f7f7f7;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -250px auto 0 -190px;
+}
