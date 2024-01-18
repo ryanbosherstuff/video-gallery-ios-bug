@@ -8,6 +8,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        // Grab the WebView from the Capacitor Bridge
+        if let webView = (window?.rootViewController as? CAPBridgeViewController)?.webView {
+            // Enable Debugging the WebView
+#if compiler(>=5.8)
+            if #available(iOS 16.4, *) {
+                webView.isInspectable = true
+            }
+#endif
+        }
+        
         return true
     }
 
